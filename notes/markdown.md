@@ -73,6 +73,7 @@ Content in the first column | Content in the second column
 #### Extras
 * [Emojis cheatsheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md)
 * Reference users with `@user`
+* ![purple](https://placehold.it/15/e9b6b3/000000?text=+) no learning resources assigned Color boxes `![white](https://placehold.it/15/F9F9F2/000000?text=+) text`
 * Tasks lists are my favorite:
 ```markdown
 - [x] This is a complete item
