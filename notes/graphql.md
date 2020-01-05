@@ -24,3 +24,5 @@ fetch("https://api.github.com/graphql",
 ).then(a=> a.json()).then(console.log)
 ```
 
+#### GraphQL playground
+https://lucasconstantino.github.io/graphiql-online/
