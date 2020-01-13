@@ -15,7 +15,7 @@ db.collection('inventory').insertOne({
 	item: 'canvas',
 	qty: 100,
 	tags: ['cotton'],
-	size: { h: 28, w: 35.5, uom: 'cm' }
+	size: { h: 28, w: 35.5, uom: 'cm' },
 });
 ```
 
@@ -134,12 +134,12 @@ Example:
   metrics: {
     orders: 2,
     ratings: 3.5
-  }
-}
+  },
+},
 //
 db.products.update(
    { sku: "abc123" },
-   { $inc: { quantity: -2, "metrics.orders": 1 } }
+   { $inc: { quantity: -2, "metrics.orders": 1 } },
 )
 // RESULT
 {
@@ -149,8 +149,8 @@ db.products.update(
    "metrics" : {
       "orders" : 3,
       "ratings" : 3.5
-   }
-}
+   },
+},
 ```
 
 Pushing to array example:
@@ -161,6 +161,6 @@ db.students.update({ _id: 1 }, { $push: { scores: 89 } });
 // Multiple values
 db.students.update(
 	{ name: 'joe' },
-	{ $push: { scores: { $each: [90, 92, 85] } } }
+	{ $push: { scores: { $each: [90, 92, 85] } } },
 );
 ```

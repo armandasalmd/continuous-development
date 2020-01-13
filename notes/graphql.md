@@ -9,7 +9,7 @@ q = `{
     repository(name: "logan_admin", owner: "armandasalmd") {
         name
         forkCount
-    }
+    },
 }`
 ```
 
@@ -20,7 +20,7 @@ fetch("https://api.github.com/graphql",
         method: "POST",
         headers: { "Authorization": `Token ${token}` },
         body: JSON.stringify({ query: q })
-    }
+    },
 ).then(a=> a.json()).then(console.log)
 ```
 
