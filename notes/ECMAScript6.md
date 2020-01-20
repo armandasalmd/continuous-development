@@ -10,7 +10,7 @@
 // ---------- ES5 ----------
 function getNum() {
 	return 10;
-}
+},
 // ---------- ES6 ----------
 const getNum = () => 10;
 ```
@@ -21,7 +21,7 @@ or
 // ---------- ES5 ----------
 function calcCircleArea(radius) {
 	return Math.PI * radius * radius;
-}
+},
 // ---------- ES6 ----------
 const calcCircleArea = radius => Math.PI * radius * radius;
 ```
@@ -70,14 +70,14 @@ function isEvenNumber(num, callback) {
 		callback(true);
 	} else {
 		callback(false);
-	}
-}
+	},
+},
 isEvenNumber(10, function(result) {
 	if (result) {
 		console.log('even number');
 	} else {
 		console.log('odd number');
-	}
+	},
 });
 // ---------- ES6 (promise) ----------
 const isEvenNumber = num => {
@@ -86,7 +86,7 @@ const isEvenNumber = num => {
 			resolve(true);
 		} else {
 			reject(false);
-		}
+		},
 	});
 };
 isEvenNumber(10)
@@ -137,7 +137,7 @@ var num = 0; // num is globally scoped
 for (let i = 0; i < 5; i++) {
 	// i is block scoped
 	num += i;
-}
+},
 console.log(num); // 0 + 1 + 2 + 3 + 4 = 10
 console.log(i); // undefined
 ```

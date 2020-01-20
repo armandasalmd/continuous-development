@@ -98,7 +98,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var blogSchema = new Schema({
-	title: String, // String is shorthand for {type: String}
+	title: String, // String is shorthand for {type: String},
 	author: String,
 	body: String,
 	comments: [{ body: String, date: Date }],
@@ -107,7 +107,7 @@ var blogSchema = new Schema({
 	meta: {
 		votes: Number,
 		favs: Number
-	}
+	},
 });
 ```
 
@@ -206,8 +206,8 @@ const schema = new Schema({
 	name: { type: String },
 	nested: {
 		firstName: { type: String },
-		lastName: { type: String }
-	}
+		lastName: { type: String },
+	},
 });
 ```
 
@@ -291,7 +291,7 @@ Person.find({
 	occupation: /host/,
 	'name.last': 'Ghost',
 	age: { $gt: 17, $lt: 66 },
-	likes: { $in: ['vaporizing', 'talking'] }
+	likes: { $in: ['vaporizing', 'talking'] },
 })
 	.limit(10)
 	.sort({ occupation: -1 })
@@ -320,7 +320,7 @@ var schema = new Schema({
 	name: {
 		type: String,
 		required: true
-	}
+	},
 });
 var Cat = db.model('Cat', schema);
 
