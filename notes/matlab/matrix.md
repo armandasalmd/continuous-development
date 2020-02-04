@@ -26,7 +26,7 @@ Set all x/y values to 0, append new z
 
 Use the index vector [1 3] in the second dimension to access only the first and last columns of each page of A.
 
-`C = A(:,[1 3],:)`
+`C = A(p:,[1 3],:)`
 
 In other words: I need **all rows**, **1st and 3rd column**, **all pages**
 

@@ -15,8 +15,8 @@ db.collection('inventory').insertOne({
 	item: 'canvas',
 	qty: 100,
 	tags: ['cotton'],
-	size: { h: 28, w: 35.5, uom: 'cm' },
-});
+	size: { h: 28, w: 35.5, uom: 'cm' }
+})
 ```
 
 ### ![purple](https://placehold.it/15/e9b6b3/000000?text=+) Query
@@ -43,7 +43,7 @@ example
 db.inventory.find({
 	status: 'A',
 	$or: [{ qty: { $lt: 30 } }, { item: /^p/ }]
-});
+})
 ```
 
 ##### Nested selection
@@ -92,9 +92,9 @@ Match where do not contain the item field
 ##### Iterator index
 
 ```js
-var myCursor = db.inventory.find({ type: 2 });
-var documentArray = myCursor.toArray(); // !!!!! with some drivers
-var myDocument = documentArray[3];
+var myCursor = db.inventory.find({ type: 2 })
+var documentArray = myCursor.toArray() // !!!!! with some drivers
+var myDocument = documentArray[3]
 ```
 
 ### ![purple](https://placehold.it/15/e9b6b3/000000?text=+) Update
@@ -157,10 +157,10 @@ Pushing to array example:
 
 ```js
 // Single value
-db.students.update({ _id: 1 }, { $push: { scores: 89 } });
+db.students.update({ _id: 1 }, { $push: { scores: 89 } })
 // Multiple values
 db.students.update(
 	{ name: 'joe' },
-	{ $push: { scores: { $each: [90, 92, 85] } } },
-);
+	{ $push: { scores: { $each: [90, 92, 85] } } }
+)
 ```
