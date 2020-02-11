@@ -1,5 +1,16 @@
 ## Matlab programming basics
 
+Calculate running time/performance:
+`tic` to start and `toc` to stop. Examples:
+
+```matlab
+tic
+for ...
+toc
+% You can also assign the toc varible to get a number itself
+>> Elapsed time is 1.637854 seconds.
+```
+
 **MATLAB is an abbreviation for "matrix laboratory."**
 
 create variable

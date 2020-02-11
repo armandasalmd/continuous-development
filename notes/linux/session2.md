@@ -1,4 +1,4 @@
-## Week 2 notes
+## Session 2 notes
 
 Notation
 
